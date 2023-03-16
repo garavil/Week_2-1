@@ -3,7 +3,7 @@
 
 class Person {
 
-    constructor ( altura, peso ){
+    constructor ( altura, peso, yearOfBirth){
 
     
 
@@ -13,6 +13,7 @@ class Person {
     this.peso = peso
     this.edad = 30
     this.colorDePelo = "Rubio"
+    this.yearOfBirth = yearOfBirth
     
     }
 
@@ -22,13 +23,31 @@ class Person {
 
     }
 
+    calculaEdad(){
+
+        return 2023 - this.yearOfBirth
+    }
+
+    printAll(){
+
+        return this.apellido 
+    }
+
 }
 
-let individuo = new Person (1.82,100)
+let individuo = new Person (1.82,100, 1993)
 
 // console.log(individuo)
 
 let calImc = individuo.imc()
 
 console.log(calImc)
+
+let calEdad = individuo.calculaEdad()
+
+console.log(calEdad)
+
+let mostrarTodo = individuo.printAll()
+
+console.log(mostrarTodo)
 
