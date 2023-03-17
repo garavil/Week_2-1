@@ -14,6 +14,7 @@ class Person {
     this.edad = 30
     this.colorDePelo = "Rubio"
     this.yearOfBirth = yearOfBirth
+    this.hobbies = ["leer", "comer", "jugar a videojuegos"]
     
     }
 
@@ -30,14 +31,23 @@ class Person {
 
     printAll(){
 
-        return this.apellido 
+        for ( let atr in this){
+
+            console.log(atr + "-" + this[atr])
+        }
+    }
+
+    printHobbies(){
+
+        return this.hobbies
+
     }
 
 }
 
 let individuo = new Person (1.82,100, 1993)
 
-// console.log(individuo)
+console.log(individuo)
 
 let calImc = individuo.imc()
 
@@ -51,3 +61,8 @@ let mostrarTodo = individuo.printAll()
 
 console.log(mostrarTodo)
 
+let hobbiesPer = individuo.printHobbies()
+
+console.log(hobbiesPer)
+
+module.exports = Person
