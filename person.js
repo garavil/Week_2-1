@@ -45,24 +45,4 @@ class Person {
 
 }
 
-let individuo = new Person (1.82,100, 1993)
-
-console.log(individuo)
-
-let calImc = individuo.imc()
-
-console.log(calImc)
-
-let calEdad = individuo.calculaEdad()
-
-console.log(calEdad)
-
-let mostrarTodo = individuo.printAll()
-
-console.log(mostrarTodo)
-
-let hobbiesPer = individuo.printHobbies()
-
-console.log(hobbiesPer)
-
 module.exports = Person
